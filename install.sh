@@ -49,8 +49,8 @@ echo -e "${G}done${RST}"
 echo -e "${Y}installing sublime-text${RST}"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt-get update -y
+sudo apt-get install sublime-text -y
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing go${RST}"
