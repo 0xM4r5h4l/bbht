@@ -62,7 +62,7 @@ source ~/.bash_profile
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing nano${RST}"
-sudo apt-get install nano
+sudo apt-get install nano -y
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing httpx & subfinder${RST}"
