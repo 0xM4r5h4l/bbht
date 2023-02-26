@@ -29,7 +29,6 @@ RST='\e[0m'
 echo -e "${Y}installing bash_profile aliases ${RST}"
 mkdir ~/tools
 cd ~/tools
-wget https://raw.githubusercontent.com/0xM4r5h4l/importants/main/bash_profile -O bash_profile
 cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
 echo -e "${G}done${RST}"
