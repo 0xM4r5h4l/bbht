@@ -55,7 +55,7 @@ echo -e "${G}done${RST}"
 
 echo -e "${Y}installing go${RST}"
 sudo add-apt-repository ppa:longsleep/golang-backports -y
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install golang-go -y
 echo "export PATH=~/go/bin/:$PATH" >> ~/.bash_profile
 source ~/.bash_profile
