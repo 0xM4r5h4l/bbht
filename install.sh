@@ -27,10 +27,9 @@ RST='\e[0m'
 
 
 echo -e "${Y}installing bash_profile aliases ${RST}"
-mkdir ~/tools
-cd ~/tools
 cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
+mkdir ~/tools
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing Dirsearch${RST}"
