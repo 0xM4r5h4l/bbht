@@ -1,2 +1,2 @@
 # bbht
-bbht config for servers
+- bbht config for servers
