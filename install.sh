@@ -89,9 +89,6 @@ git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
 mv ffuf ~/go/bin/
 echo -e "${G}done${RST}"
 
-echo -e "${Y}installing Aquatone${RST}"
-go get github.com/michenriksen/aquatone
-echo -e "${G}done${RST}"
 
 echo -e "${Y}downloading jhaddix content discovery wordlist${RST}"
 cd ~/tools/SecLists/Discovery/Web-Content/
