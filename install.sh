@@ -79,16 +79,11 @@ echo -e "${Y}installing Amass${RST}"
 go install -v github.com/OWASP/Amass/v3/...@master
 echo -e "${G}done${RST}"
 
-echo -e "${Y}installing Assetfinder${RST}"
-go get -u github.com/tomnomnom/assetfinder
-echo -e "${G}done${RST}"
-
 echo -e "${Y}installing ffuf${RST}"
 cd ~/tools
 git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
 mv ffuf ~/go/bin/
 echo -e "${G}done${RST}"
-
 
 echo -e "${Y}downloading jhaddix content discovery wordlist${RST}"
 cd ~/tools/SecLists/Discovery/Web-Content/
