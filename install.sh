@@ -30,11 +30,6 @@ source ~/.bash_profile
 mkdir ~/tools
 echo -e "${G}done${RST}"
 
-echo -e "${Y}installing Dirsearch${RST}"
-cd ~/tools
-git clone https://github.com/maurosoria/dirsearch.git
-echo -e "${G}done${RST}"
-
 echo -e "${Y}downloading Seclists${RST}"
 cd ~/tools/
 git clone https://github.com/danielmiessler/SecLists.git
