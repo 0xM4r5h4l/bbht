@@ -64,24 +64,28 @@ sudo apt-get install nano -y
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing httpx & subfinder${RST}"
-sudo go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-sudo go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+#install subfinder
+cd ~/tools
+git clone https://github.com/projectdiscovery/subfinder; cd subfinder ; go get ; go build
+mv subfinder ~/go/bin/
+#install httpx
+cd ~/tools
+git clone https://github.com/projectdiscovery/httpx; cd httpx ; go get ; go build
+mv httpx ~/go/bin/
 echo -e "${G}done${RST}"
 
-echo -e "${Y}installing feroxbuster${RST}"
-curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
-mv feroxbuster ~/go/bin/
-echo -e "${G}done${RST}"
 
 echo -e "${Y}installing Amass${RST}"
 go install -v github.com/OWASP/Amass/v3/...@master
 echo -e "${G}done${RST}"
+
 
 echo -e "${Y}installing ffuf${RST}"
 cd ~/tools
 git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
 mv ffuf ~/go/bin/
 echo -e "${G}done${RST}"
+
 
 echo -e "${Y}downloading jhaddix content discovery wordlist${RST}"
 cd ~/tools/SecLists/Discovery/Web-Content/
