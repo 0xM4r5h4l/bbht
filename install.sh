@@ -61,12 +61,12 @@ echo -e "${G}done${RST}"
 echo -e "${Y}installing httpx & subfinder${RST}"
 #install subfinder
 cd ~/tools
-git clone https://github.com/projectdiscovery/subfinder; cd subfinder/v2/cmd/subfinder/ ; go get ; go build
-mv subfinder ~/go/bin/
+git clone https://github.com/projectdiscovery/subfinder; cd ~/tools/subfinder/v2/cmd/subfinder/ ; go get ; go build
+mv ~/tools/subfinder/v2/cmd/subfinder/subfinder ~/go/bin/
 #install httpx
 cd ~/tools
-git clone https://github.com/projectdiscovery/httpx; cd httpx/cmd/httpx/ ; go get ; go build
-mv httpx ~/go/bin/
+git clone https://github.com/projectdiscovery/httpx; cd ~/tools/httpx/cmd/httpx/ ; go get ; go build
+mv ~/tools/httpx/cmd/httpx/httpx ~/go/bin/
 echo -e "${G}done${RST}"
 
 
@@ -90,6 +90,8 @@ echo -e "${G}done${RST}"
 echo -e "${Y}installing nmap${RST}"
 sudo apt-get install nmap -y
 echo -e "${G}done${RST}"
+
+source ~/.bash_profile
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\n ${G}Done! All tools are set up in ~/tools${RST}"
 ls -la
