@@ -91,7 +91,5 @@ echo -e "${Y}installing nmap${RST}"
 sudo apt-get install nmap -y
 echo -e "${G}done${RST}"
 
-source ~/.bash_profile
-
 echo -e "\n\n\n\n\n\n\n\n\n\n\n ${G}Done! All tools are set up in ~/tools${RST}"
 ls -la
