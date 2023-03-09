@@ -91,5 +91,14 @@ echo -e "${Y}installing nmap${RST}"
 sudo apt-get install nmap -y
 echo -e "${G}done${RST}"
 
+echo -e "${Y}Git Configrations${RST}"
+echo -e "${G}[Git Config]${RST} user.email: "
+read git_email
+echo -e "${G}[Git Config]${RST} user.name: "
+read git_name
+git config --global user.email "${git_email}"
+git config --global user.name "${git_name}"
+echo -e "${G}done${RST}"
+
 echo -e "\n\n\n\n\n\n\n\n\n\n\n ${G}Done! All tools are set up in ~/tools${RST}"
 ls -la
