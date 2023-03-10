@@ -14,7 +14,6 @@ sudo apt-get install -y libldns-dev
 sudo apt-get install -y python3-pip
 sudo apt-get install -y git
 sudo apt-get install -y rename
-sudo apt-get install -y xargs
 sudo apt-get install unzip -y
 
 #colors
