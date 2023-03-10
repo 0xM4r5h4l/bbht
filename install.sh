@@ -62,11 +62,11 @@ echo -e "${Y}installing httpx & subfinder${RST}"
 #install subfinder
 cd ~/tools
 git clone https://github.com/projectdiscovery/subfinder; cd ~/tools/subfinder/v2/cmd/subfinder/ ; go build -v .
-sudo mv subfinder ~/go/bin/
+sudo mv ~/tools/subfinder/v2/cmd/subfinder/subfinder ~/go/bin/
 #install httpx
 cd ~/tools
 git clone https://github.com/projectdiscovery/httpx; cd ~/tools/httpx/cmd/httpx/ ; go build -v .
-sudo mv httpx ~/go/bin/
+sudo mv ~/tools/httpx/cmd/httpx/httpx ~/go/bin/
 echo -e "${G}done${RST}"
 
 
