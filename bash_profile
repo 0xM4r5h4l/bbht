@@ -6,6 +6,14 @@ sprofile(){
 source ~/.bash_profile
 }
 
+scan(){
+if [[ $# -eq 2 ]];then
+httpx -l "$1" -cl -title -server -t 60 -p "$2"
+else
+echo "ex: scan domain-list.txt 80,443"
+fi
+}
+
 subf(){
 subfinder -d "$1" -silent -all -cs
 }
