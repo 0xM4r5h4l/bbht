@@ -7,7 +7,7 @@ source ~/.bash_profile
 }
 
 subf(){
-subfinder -d $1 -all -cs
+subfinder -d "$1" -all -cs
 }
 
 crtsh(){
