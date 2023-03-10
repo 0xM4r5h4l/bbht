@@ -7,11 +7,7 @@ source ~/.bash_profile
 }
 
 subf(){
-if [[ $# -eq 3 ]];then
-subfinder -d "$1" -o "$2" -silent -all -cs
-else
-echo "ex: subf test.example.com subf-out.txt"
-fi
+subfinder -d "$1" -silent -all -cs
 }
 
 
