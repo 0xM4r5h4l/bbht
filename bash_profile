@@ -6,7 +6,7 @@ sprofile(){
 source ~/.bash_profile
 }
 
-sf(){
+subf(){
 subfinder -d $1 -all -cs
 }
 
