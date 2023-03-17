@@ -58,14 +58,10 @@ sudo apt-get install nano -y
 echo -e "${G}done${RST}"
 
 echo -e "${Y}installing httpx & subfinder${RST}"
-#install subfinder
-cd ~/tools
-git clone https://github.com/projectdiscovery/subfinder; cd ~/tools/subfinder/v2/cmd/subfinder/ ; go build -v .
-sudo mv ~/tools/subfinder/v2/cmd/subfinder/subfinder ~/go/bin/
 #install httpx
-cd ~/tools
-git clone https://github.com/projectdiscovery/httpx; cd ~/tools/httpx/cmd/httpx/ ; go build -v .
-sudo mv ~/tools/httpx/cmd/httpx/httpx ~/go/bin/
+go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+#install subfinder
+go install github.com/projectdiscovery/subfinder/cmd/subfinder@latest
 echo -e "${G}done${RST}"
 
 
