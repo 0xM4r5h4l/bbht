@@ -71,7 +71,8 @@ then
     apt-get update
     apt-get install -y golang
     # Add Go to the system path
-    echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
+    echo "echo export GOPATH=$HOME/go" >> ~/.bash_profile
+    echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bash_profile
     echo "export GO111MODULE=on" >> ~/.bash_profile
     source ~/.bash_profile
     echo -e "${G}(+) Go has been successfully installed.${RST}"
@@ -94,14 +95,12 @@ echo -e "${G}Done.${RST}"
 
 
 echo -e "${Y}(+) Installing Amass${RST}"
-go install -v github.com/OWASP/Amass/v3/...@master
+go install github.com/OWASP/Amass/v3/...@master
 echo -e "${G}Done.${RST}"
 
 
 echo -e "${Y}(+) Installing FFUF${RST}"
-cd ~/tools
-git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
-sudo mv ffuf ~/go/bin/
+go install github.com/ffuf/ffuf@latest
 echo -e "${G}Done.${RST}"
 
 
