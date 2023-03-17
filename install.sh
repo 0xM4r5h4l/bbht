@@ -127,14 +127,21 @@ echo -e "${G}Done.${RST}"
 
 
 
-echo -e "${Y}Downloading jhaddix content discovery wordlist${RST}"
+echo -e "${Y}(+) Downloading Jhaddix content discovery wordlist${RST}"
 cd ~/tools/SecLists/Discovery/Web-Content/
 wget https://gist.githubusercontent.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O all_jhaddix.txt
 echo -e "${G}Done.${RST}"
 
 
 
-echo -e "${Y}Installing nmap${RST}"
+echo -e "${Y}(+) Downloading leaky-paths wordlist${RST}"
+cd ~/tools/SecLists/Discovery/Web-Content/
+wget https://raw.githubusercontent.com/ayoubfathi/leaky-paths/main/leaky-paths.txt -O leaky-paths.txt
+echo -e "${G}Done.${RST}"
+
+
+
+echo -e "${Y}(+) Installing nmap${RST}"
 sudo apt-get install nmap -y
 echo -e "${G}Done.${RST}"
 
@@ -148,10 +155,6 @@ read git_name
 git config --global user.email "${git_email}"
 git config --global user.name "${git_name}"
 echo -e "${G}done${RST}"
-
-
-
-trap 'echo "Error: Script failed at line $LINENO" >&2' ERR
 
 
 
