@@ -78,7 +78,7 @@ then
     sudo apt-get update
     sudo apt-get install -y golang
     # Add Go to the system path
-    echo "echo export GOPATH=$HOME/go" >> ~/.bash_profile
+    echo "export GOPATH=$HOME/go" >> ~/.bash_profile
     echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bash_profile
     echo "export GO111MODULE=on" >> ~/.bash_profile
     source ~/.bash_profile
