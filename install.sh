@@ -75,13 +75,24 @@ if ! command -v go &> /dev/null
 then
     echo -e "${R}(-) Go is not installed. Installing now...${RST}"
     # Install Go
-    sudo apt-get update
-    sudo apt-get install -y golang
-    # Add Go to the system path
-    echo "export GOPATH=$HOME/go" >> ~/.bash_profile
-    echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bash_profile
-    echo "export GO111MODULE=on" >> ~/.bash_profile
-    source ~/.bash_profile
+    # Determine the latest version of Go
+    VERSION=$(curl -s -L https://golang.org/VERSION?m=text)
+
+    # Download the latest version of the Go binary distribution for Linux
+    wget https://dl.google.com/go/$VERSION.linux-amd64.tar.gz
+
+    # Extract the downloaded archive to ~/go
+    tar -C ~/ -xzf $VERSION.linux-amd64.tar.gz
+
+    # Add the Go binary directory to the PATH environment variable
+    echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
+    echo 'export PATH=$PATH:~/go/bin' >> ~/.profile
+    source ~/.bashrc
+
+    # Verify that Go has been installed correctly
+    go version
+    # Remove the downloaded archive
+    rm $VERSION.linux-amd64.tar.gz
     echo -e "${G}(+) Go has been successfully installed.${RST}"
 else
     echo "${Y}Note: Go is already installed.${RST}"
