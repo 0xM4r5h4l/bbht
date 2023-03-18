@@ -95,7 +95,7 @@ then
     rm $VERSION.linux-amd64.tar.gz
     echo -e "${G}(+) Go has been successfully installed.${RST}"
 else
-    echo "${Y}Note: Go is already installed.${RST}"
+    echo -e "${Y} Note: Go is already installed. ${RST}"
 fi
 
 
