@@ -110,7 +110,7 @@ echo -e "${Y}(+) Installing Httpx & Subfinder${RST}"
 #install httpx
 go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 #install subfinder
-go install github.com/projectdiscovery/subfinder/cmd/subfinder@latest
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 echo -e "${G}Done.${RST}"
 
 
