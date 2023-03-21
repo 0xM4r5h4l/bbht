@@ -139,7 +139,22 @@ cd ~/tools/SecLists/Discovery/Web-Content/
 wget https://raw.githubusercontent.com/ayoubfathi/leaky-paths/main/leaky-paths.txt -O leaky-paths.txt
 echo -e "${G}Done.${RST}"
 
-
+echo -e "${Y}(+) Downloading assetnote wordlists /ext ${$RST}"
+mkdir ~/tools/SecLists/Discovery/Web-Content/ext
+cd ~/tools/SecLists/Discovery/Web-Content/ext
+wget https://wordlists-cdn.assetnote.io/data/manual/jsp.txt -O jsp.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/cfm.txt -O cfm.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/html.txt -O html.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/bak.txt -O bak.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/dot_filenames.txt -O dot_filenames.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/do.txt -O do.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/aspx_lowercase.txt -O aspx_lowercase.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/asp_lowercase.txt -O asp_lowercase.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/php.txt -O php.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/phpmillion.txt -O phpmillion.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/pl.txt -O pl.txt
+wget https://wordlists-cdn.assetnote.io/data/manual/xml_filenames.txt -O xml_filenames.txt
+echo -e "${G}Done.${RST}"
 
 echo -e "${Y}(+) Installing nmap${RST}"
 sudo apt-get install nmap -y
