@@ -22,4 +22,4 @@ crtsh(){
 curl -s https://crt.sh/\?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u
 }
 
-common10="443,8080,8000,8443,8888,8008,9000,8010,8090,8009" # 10 most common ports for web http service
+common10="80,443,8080,8000,8443,8888,8008,9000,8010,8090,8009" # 10 most common ports for web http service
