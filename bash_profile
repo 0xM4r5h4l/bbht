@@ -8,7 +8,7 @@ source ~/.bash_profile
 
 scan(){
 if [[ $# -eq 2 ]];then
-httpx -l "$1" -cl -sc -title -server -t 60 -p "$2"
+httpx -l "$1" -cl -sc -title -server -location -td -t 70 -p "$2"
 else
 echo "ex: scan domain-list.txt 80,443"
 fi
