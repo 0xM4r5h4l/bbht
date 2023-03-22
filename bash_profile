@@ -33,7 +33,7 @@ kata(){
 }
 
 asnscan(){
-        if [[ $# -eq 3 ]];then
+        if [[ $# -eq 1 ]];then
                 amass intel -asn "$1"
         else
 		echo "ex: asnscan 19604"
