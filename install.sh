@@ -139,6 +139,8 @@ cd ~/tools/SecLists/Discovery/Web-Content/
 wget https://raw.githubusercontent.com/ayoubfathi/leaky-paths/main/leaky-paths.txt -O leaky-paths.txt
 echo -e "${G}Done.${RST}"
 
+
+
 echo -e "${Y}(+) Downloading assetnote wordlists /ext ${$RST}"
 mkdir ~/tools/SecLists/Discovery/Web-Content/ext
 cd ~/tools/SecLists/Discovery/Web-Content/ext
@@ -156,8 +158,17 @@ wget https://wordlists-cdn.assetnote.io/data/manual/pl.txt -O pl.txt
 wget https://wordlists-cdn.assetnote.io/data/manual/xml_filenames.txt -O xml_filenames.txt
 echo -e "${G}Done.${RST}"
 
+
+
 echo -e "${Y}(+) Installing nmap${RST}"
 sudo apt-get install nmap -y
+echo -e "${G}Done.${RST}"
+
+
+echo -e "${Y}(+) Installing nuclei & templates${RST}"
+cd ~/tools
+git clone https://github.com/projectdiscovery/nuclei-templates
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 echo -e "${G}Done.${RST}"
 
 
