@@ -76,7 +76,7 @@ then
     echo -e "${R}(-) Go is not installed. Installing now...${RST}"
     # Install Go
     # Determine the latest version of Go
-    VERSION=$(curl -s -L https://golang.org/VERSION?m=text)
+    VERSION=$(curl -s -L https://golang.org/VERSION?m=text | head -n 1)
 
     # Download the latest version of the Go binary distribution for Linux
     wget https://dl.google.com/go/$VERSION.linux-amd64.tar.gz
