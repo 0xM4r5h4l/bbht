@@ -116,7 +116,7 @@ echo -e "${G}Done.${RST}"
 
 
 echo -e "${Y}(+) Installing Amass${RST}"
-go install github.com/OWASP/Amass/v3/...@master
+go install -v github.com/owasp-amass/amass/v4/...@master
 echo -e "${G}Done.${RST}"
 
 
