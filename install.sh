@@ -29,12 +29,7 @@ sudo apt-get upgrade -y
 apt-get install -y software-properties-common
 add-apt-repository universe
 apt-get update
-sudo apt-get install -y libcurl4-openssl-dev libssl-dev
-sudo apt-get install -y jq
-sudo apt-get install -y ruby-full
-sudo apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev build-essential libssl-dev libffi-dev
-sudo apt-get install -y libldns-dev
-sudo apt-get install -y python3-pip python-setuptools git rename unzip curl tor whois docker.io
+sudo apt-get install -y python3-pip python-setuptools git rename unzip curl tor whois docker.io libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev build-essential libssl-dev libffi-dev libldns-dev libcurl4-openssl-dev libssl-dev ruby-full jq 
 
 
 # Function to print error message and exit
