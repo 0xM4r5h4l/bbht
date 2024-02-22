@@ -86,12 +86,11 @@ then
     wget https://dl.google.com/go/$VERSION.linux-amd64.tar.gz
 
     # Extract the downloaded archive to ~/go
-    tar -C ~/ -xzf $VERSION.linux-amd64.tar.gz
+    tar -C /usr/local -xzf $VERSION.linux-amd64.tar.gz
 
     # Add the Go binary directory to the PATH environment variable
-    echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
-    echo 'export PATH=$PATH:~/go/bin' >> ~/.profile
-    source ~/.bashrc
+    echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+    export PATH=$PATH:/usr/local/go/bin
 
     # Verify that Go has been installed correctly
     go version
