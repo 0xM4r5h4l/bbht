@@ -109,10 +109,11 @@ echo -e "${G}Done.${RST}"
 
 # Install theHarvester
 echo -e "$BLUE[*]$RESET Installing TheHarvester...$RESET"
-git clone https://github.com/laramies/theHarvester.git /tmp/theharvester || print_error "Failed to clone theHarvester repository"
-cd /tmp/theharvester || print_error "Failed to change directory to theharvester"
+cd ~/tools
+git clone https://github.com/laramies/theHarvester.git ~/tools/theHarvester || print_error "Failed to clone theHarvester repository"
+cd ~/tools/theHarvester
 python3 -m pip install --user -r requirements.txt || print_error "Failed to install theHarvester dependencies"
-mv theHarvester.py /usr/local/bin/theharvester || print_error "Failed to move theHarvester executable"
+ln -fs theHarvester.py /usr/local/bin/theharvester || print_error "Failed to link theHarvester executable"
 chmod +x /usr/local/bin/theharvester || print_error "Failed to set execute permissions for theharvester"
 print_success "[+] TheHarvester has been successfully installed"
 
@@ -185,7 +186,7 @@ git clone https://github.com/blacklanternsecurity/bbot || print_error "Failed to
 
 # Configure Git
 echo -e "${Y}Git Configrations${RST}"
-git config --global user.email "MARSHAL@example.com"
+git config --global user.email "0xm4r5h4l@github.com"
 git config --global user.name "MARSHAL"
 
 
