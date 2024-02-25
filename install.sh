@@ -26,10 +26,10 @@ GRAY='\033[90m'          # Gray
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
-apt-get install -y software-properties-common
-add-apt-repository universe
-apt-get update
-sudo apt-get install -y python3-pip python-setuptools git rename unzip curl tor whois docker.io libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev build-essential libssl-dev libffi-dev libldns-dev libcurl4-openssl-dev libssl-dev ruby-full jq 
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y universe
+sudo apt-get update -y
+sudo apt-get install -y python3-pip python-setuptools git rename unzip curl tor whois docker.io libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev build-essential libssl-dev libffi-dev libldns-dev libcurl4-openssl-dev libssl-dev ruby-full jq
 
 
 # Function to print error message and exit
@@ -117,7 +117,7 @@ chmod +x /usr/local/bin/theharvester || print_error "Failed to set execute permi
 print_success "[+] TheHarvester has been successfully installed"
 
 echo -e "${B}[*]${RST} Installing Amass${RST}"
-go install -v github.com/owasp-amass/amass/v4/...@master
+go install -v "github.com/owasp-amass/amass/v4/...@master"
 echo -e "${G}Done.${RST}"
 
 echo -e "${B}[*]${RST} Downloading Jhaddix content discovery wordlist${RST}"
@@ -183,14 +183,11 @@ git clone https://github.com/blacklanternsecurity/bbot || print_error "Failed to
 
 
 
+# Configure Git
 echo -e "${Y}Git Configrations${RST}"
-echo -e "${G}[Git Config]${RST} user.email: "
-read git_email
-echo -e "${G}[Git Config]${RST} user.name: "
-read git_name
-git config --global user.email "${git_email}"
-git config --global user.name "${git_name}"
-echo -e "${G}done${RST}"
+git config --global user.email "MARSHAL@example.com"
+git config --global user.name "MARSHAL"
+
 
 
 
